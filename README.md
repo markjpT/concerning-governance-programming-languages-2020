@@ -3,7 +3,7 @@ Concerning Governance in Programming Languages, 2019 edition
 
 Presentation (in English) about **Concerning Governance in Programming Languages** by [Luis García Castro](https://github.com/LuisGC)
 
-View in GitHub-Pages: [Concerning Governance in Programming Languages] (https://luisgc.github.com/concerning-governance-programming-languages-2019)
+View in GitHub-Pages: [Concerning Governance in Programming Languages] (https://luisgc.github.com/concerning-governance-programming-languages-2020)
 
 # Content
 
