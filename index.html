@@ -1,0 +1,1240 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Concerning Governance in programming languages - Luis García Castro</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<div class="title"><em>Concerning Governance<br/>in programming languages</em></div>
+				<div class="slide-content">
+					<img src="img/programming-languages-cover.png" alt="Programming languages" class="img_full maxed_height blur" />
+					<div class="author">
+						<p>November 2019<br /><em>Luis García Castro</em></p>
+					</div>
+					<div class="event_logo">
+						<img src="img/logos/CommitConf.png" alt="Commit Conf logo" />
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<section data-background="img/gifs/thinking.gif">
+					<div class="subtitle">
+						<p><b>Why</b> am <b>I</b> here...</p>
+					</div>
+					<aside class="notes">
+						<p>Original idea and disclaimers first...</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title">Introduction</div>
+					<div class="slide-content">
+						<img src="img/Luiyo.jpg" alt="LuisGC" class="author_picture" />
+						<p id="name">
+							<em>Luis García Castro</em>
+						</p>
+						<p>Data Driven Architect</p>
+						<img src="img/logos/ING-Group.png" alt="ING Group" class="small_rounded_icon" />
+						<br /><br />
+						<p id="twitter">
+							<img src="img/social/twitter.png" alt="Twitter" class="rounded_icon" />
+							<a href="https://twitter.com/luiyo">
+								twitter.com/luiyo
+							</a>
+						</p>
+						<p id="github">
+							<img src="img/social/github.png" alt="GitHub" class="rounded_icon" />
+							<a href="https://github.com/LuisGC">
+								github.com/LuisGC
+							</a>
+						</p>
+						<p id="linkedin">
+							<img src="img/social/linkedin.png" alt="LinkedIn" class="rounded_icon" />
+							<a href="http://www.linkedin.com/in/LuisGC">
+								linkedin.com/in/LuisGC
+							</a>
+						</p>
+						<br />
+						<p id="osmf">
+							<img src="img/icons/fsfe.png" alt="OpenStreetMap Foundation" class="rounded_icon" />
+							Proud member of the <a href="https://fsfe.org/"><em>Free Software Foundation Europe</em></a>
+						</p>
+						<p id="osm_profile">
+							<img src="img/icons/osmf.png" alt="OpenStreetMap Profile" class="rounded_icon" />
+							Proud member of the <a href="http://osmfoundation.org/"><em>Open Street Map Foundation</em></a>
+						</p>
+						<br />
+						<br />
+						<p id="openSource">
+							<img src="img/icons/open-source.png" alt="Impress.js" class="rounded_icon" />
+							<span class="footer"><i>Presentation made with the awesome Open Source tool <a href="https://github.com/hakimel/reveal.js"><em>Reveal.js</em></a></i></span>
+						</p>
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<div class="slide-title">Table of contents</div>
+				<div class="slide-content">
+					<ul class="lv1_indent">
+						<li><em>Important aspects of Governance</em></li>
+						<ul class="lv1_indent">
+							<li>Language Health: popularity, activity and evolution</li>
+							<li>Governance systems</li>
+							<li>Software licenses</li>
+							<li>Community value: size, relevance, diversity, ...</li>
+						</ul>
+						<br />
+						<li><em>Comparing some of the main languages together</em></li>
+						<ul class="lv1_indent">
+							<li>by public projects, by jobs posted, by SO activity, ...</li>
+						</ul>
+						<br />
+						<li><em>Critical Analysis of those languages</em></li>
+						<ul class="lv1_indent">
+							<li>Java, C, C#, Python, PHP, JavaScript, Ruby, Perl, Groovy, Go, Rust, Clojure, Scala & Kotlin</li>
+						</ul>
+						<br />
+						<li><em>My own Magic Quadrant</em></li>
+						<br />
+						<li><em>Discuss!! ;-)</em></li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<section data-background="img/gifs/Great-Dictator.gif">
+
+					<div class="subtitle">
+						<p>Important aspects of<br /><em>Governance</em></p>
+					</div>
+					<aside class="notes">
+						<p>This aspects are related to the Governance itself, but also to the <b>community</b> and the language general <b>health</b></p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title">Language popularity</div>
+					<div class="slide-content">
+						<center><img src="img/TIOBE_2019_10.png" alt="TIOBE Programming Community index - Oct 2019" class="full_height" /></center>
+						<div class="source">
+							<p>Source: <a href="https://www.tiobe.com/tiobe-index/">TIOBE Programming Community Index</a> (Oct 2019)</p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>The TIOBE Programming Community index is an indicator of the popularity of programming languages. The index is updated once a month. The ratings are based on the number of skilled engineers world-wide, courses and third party vendors</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title">Language Activity</div>
+					<div class="slide-content">
+						<img src="img/language-rankings-2019-Q3.png" alt="language rankings in Q3 2019" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://redmonk.com/sogrady/2019/07/18/language-rankings-6-19/">Redmonk.com</a> (Q3 2019)</p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>This simple graphic shows how common is to find repos and doubts of a specific language</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title">Language evolution</div>
+					<div class="slide-content">
+						<img src="img/Java_code_evolution.jpg" alt="Java Code Evolution" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://twitter.com/fabianenardon/status/658742339217682432">@fabianenardon</a> at JavaOne 2015</p>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<p>Java 1: 1997</p>
+							<p>Java 5: 2004</p>
+							<p>Java 8: 2014</p>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title">Ecosystem evolution</div>
+					<div class="slide-content">
+						<img src="img/Java-JVM-2019-Q3.jpg" alt="Java & JVM ecosystem Evolution" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://www.infoq.com/articles/java-jvm-trends-2019/">Java InfoQ Trends Report - July 2019</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<p>...</p>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title">Governance systems: BDFLs, Boards, ...</div>
+					<div class="slide-content">
+						<center><img src="img/what_is_democracy.gif" alt="What is democracy" class="img_full maxed_height" /></center>
+						<div class="source">
+							<p>Source: Unknown (sorry)</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>BDFLs</p>
+						<ul>
+							<li>Dennis Ritchie* in C</li>
+							<li>Guido van Rossum in Python</li>
+							<li>Yukihiro Matsumoto* in Ruby</li>
+							<li>Larry Wall in Perl</li>
+							<li>Rich Hickey in Clojure</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title">Main Free Software Licenses</div>
+					<div class="slide-content"
+					<center><img src="img/oss_licenses.png" alt="OSS Licenses" class="img_full maxed_height" /></center>
+					<div class="source">
+						<p>Source: <a href="https://en.wikipedia.org/wiki/Permissive_software_license">Wikipedia</a></p>
+					</div>
+				</div>
+				<aside class="notes">
+					<p>Some licenses are no copy left compatible:</p>
+					<ul>
+						<li>GPL: FSF yes, copyleft Yes</li>
+						<li>BSD: FSF yes, GPL compatible NO, copyleft No</li>
+						<li>MIT: FSF yes, GPL compatible yes, copyleft No</li>
+						<li>AL: FSF yes, GPL compatible yes, copyleft No</li>
+						<li>MPL: FSF yes, GPL compatible yes, copyleft Partial</li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<div class="slide-title">Community size and relevance</div>
+				<div class="slide-content">
+					<img src="img/PyConES-2019.jpg" alt="PyConES 2019" class="img_full maxed_height" />
+					<div class="source">
+						<p>Source: <a href="https://2019.es.pycon.org/">2019.es.pycon.org</a></p>
+					</div>
+				</div>
+				<aside class="notes">
+					<ul>
+						<p>The people who made PyConES 2019 in Alicante possible</p>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<div class="slide-title">Community diversity</div>
+				<div class="slide-content">
+					<img src="img/django-girls.jpg" alt="Django Girls at PyConEs 2015" class="img_full maxed_height" />
+					<div class="source">
+						<p>Source: <a href="https://twitter.com/DjangoGirlsES/status/667790191487266816">Django Girls at PyConEs 2015</a></p>
+					</div>
+				</div>
+				<aside class="notes">
+					<p>Attributes: age, culture, ethnicity, gender identity or expression, national origin, physical or mental difference, politics, race, religion, sex, sexual orientation, socio-economic status, and subculture.</p>
+					<p>Source: <a href="https://www.python.org/community/diversity/">python.org</a></p>
+				</aside>
+			</section>
+
+		</section>
+
+		<section>
+
+			<section data-background="img/gifs/minions-fight.gif">
+				<div class="subtitle">
+					<p>Comparing some of the <br /><em>main languages</em> together...</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="slide-title">by repos <b>created</b> on Github</div>
+				<div class="slide-content">
+					<img src="img/github_repos_since_2010.png" alt="# repos created on Github since 2010" class="img_full full_height" />
+					<div class="source">
+						<p>Source: <a href="https://github.com/oprogramador/github-languages">github.com/oprogramador/github-languages</a> (Oct 2019)</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="slide-title">by <b>jobs posted</b> in LinkedIn (Spain)</div>
+				<div class="slide-content">
+					<img src="img/jobs_posted_linkedin_spain.png" alt="# jobs posted on LinkedIn (in Spain)" class="img_full full_height" />
+					<div class="source">
+						<p>Source: <a href="https://www.linkedin.com/jobs/">LinkedIn.com/jobs</a> (Nov 2019)</p>
+					</div>
+				</div>
+				<aside class="notes">
+					<p>Data about C or Go not fully reliable</p>
+				</aside>
+			</section>
+
+			<section>
+				<div class="slide-title">by <b>activity</b> in StackOverflow</div>
+				<div class="slide-content">
+					<img src="img/activity_StackOverflow.png" alt="Activity in StackOverflow" class="img_full full_height" />
+					<div class="source">
+						<p>Source: <a href="http://stackoverflow.com/tags">StackOverflow.com/tags</a> (Nov 2019)</p>
+					</div>
+				</div>
+			</section>
+
+		</section>
+
+		<section data-background="img/gifs/nervous_minions.gif">
+			<div class="subtitle">
+				<p><em>Critical Analysis</em><br />of those languages</p>
+			</div>
+			<aside class="notes">
+				<p>For each of them we'll review:</p>
+				<ul>
+					<li>Designer and year of birth</li>
+					<li>License</li>
+					<li>Last stable version</li>
+					<li>Standardized and governance system</li>
+					<li>Relevant aspects</li>
+				</ul>
+			</aside>
+		</section>
+
+		<section>
+			<section>
+				<div class="slide-title centered-title">
+					<img src="img/logos/Java.png" alt="Java logo" class="slide_logo" /> <em>Java</em>
+				</div>
+				<div class="slide-content">
+					<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+						Designed by <em>James Gosling</em> @ Sun Microsystems in <em>1995</em>
+					</p>
+					<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+						<em>GNU GPL License</em> (since 2007)
+					</p>
+					<br />
+					<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+						Last stable version: <em>Java SE 13</em> (published in 21/08/2019)
+					</p>
+					<ul class="lv1_indent">
+						<li>Java 7 took 4,5 years, Java 8 took 3 years, Java 9 took 3,5 years... Since then there is a 6-month release cycle</li>
+					</ul>
+					<br />
+					<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+						Standardized: <em>de facto standard</em>
+					</p>
+					<ul class="lv1_indent">
+						<li>Language is defined in the <a href="https://docs.oracle.com/javase/specs/index.html">Java Language Specification</a></li>
+						<li>The <a href="https://jcp.org/en/procedures/jcp2">JCP</a> defines and improves the standard</li>
+					</ul>
+					<br />
+					<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+						Relevant aspects:
+					</p>
+					<ul class="lv1_indent">
+						<li class="fragment">Java is open, but is the process?</li>
+						<li class="fragment">The JCP is transparent and more or less plural</li>
+						<li class="fragment">... but <a href="http://arstechnica.com/information-technology/2010/11/apache-foundation-to-vote-down-java-7-protesting-oracle-abuses/">Oracle abused of the JCP in the past</a></li>
+					</ul>
+				</div>
+				<aside class="notes">
+					<p>A de facto standard is a custom, convention, product, or system that has achieved a dominant position by public acceptance or market forces (such as early entrance to the market)</p>
+				</aside>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title"><em>New JDK Release Model</em></div>
+				<div class="slide-content">
+					<img src="img/JDK-Release-Model.png" alt="New JDK Release Model" class="img_full maxed_height" />
+					<div class="source">
+						<p>Source: <a href="https://www.oracle.com/technetwork/java/java-se-support-roadmap.html">Oracle Java SE Support Roadmap | Oracle.com</a></p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<div class="slide-title centered-title">
+					<img src="img/logos/C.png" alt="C logo" class="slide_logo" /> <em>C</em>
+				</div>
+				<div class="slide-content">
+					<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+						Designed by <em>Dennis Ritchie</em> @ Bell Labs in <em>1972</em>
+					</p>
+					<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+						<em>GNU GPL License</em> (since 2007)
+					</p>
+					<br />
+					<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+						Last stable version: <a href="https://www.iso.org/committee/45202.html">C18</a> (published in June 2018)
+					</p>
+					<br />
+					<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+						Standardized: <em>since 1989 (ANSI C89, ISO C90, ISO C99, ISO C11, ISO C18)</em>
+					</p>
+					<ul class="lv1_indent">
+						<li>the <a href="http://www.open-std.org/jtc1/sc22/wg14/">WG14</a> defines and improves the standard</li>
+					</ul>
+					<br />
+					<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+						Relevant aspects:
+					</p>
+					<ul class="lv1_indent">
+						<li class="fragment">The WG14 membership is unclear</li>
+						<li class="fragment">One of the oldest, but still evolving (slowly)!</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title"><em>The first BDFL</em></div>
+				<div class="slide-content">
+					<center><img src="img/dennis_ritchie.gif" alt="Dennis Ritchie" class="full_height" /></center>
+					<div class="source">
+						<p>Source: <a href="https://www.flickr.com/photos/darthpedrius/6846503357">darthpedrius @ Flickr</a></p>
+					</div>
+				</div>
+				<aside class="notes">
+					<p>Dennis Ritchie started as BDFL but ceded control to the <i>Working Group</i></p>
+					<p>Notable work</p>
+					<ul>
+						<li>C (with Brian Kernighan)</li>
+						<li>Unix (with Ken Thompson)</li>
+						<li>Unix Programmer's Manual (1971)</li>
+						<li>The C Programming Language or K&R (1978)</li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<div class="slide-title centered-title">
+					<img src="img/logos/C_Sharp.png" alt="C# logo" class="slide_logo" /> <em>C#</em>
+				</div>
+				<div class="slide-content">
+					<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+						Designed by a Microsoft team lead by <em>Anders Hejlsberg</em> in <em>2000</em>
+					</p>
+					<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+						Extremely different <em>Licenses</em>
+					</p>
+					<ul class="lv1_indent">
+						<li>Microsoft replaced in 2016 the proprietary .Net Framework with <a href="https://en.wikipedia.org/wiki/.NET_Core">.NET Core</a> (<em>MIT License</em>)</li>
+						<li>There is an almost complete open implementation by Xamarin: <a href="http://www.mono-project.com/">The Mono Project</a> (<em>MIT License</em>)</li>
+					</ul>
+					<br />
+					<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+						Last stable version: <em>v8.0</em> (published in 23/09/2019)
+					</p>
+					<br />
+					<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+						Standardized: <em>since 2000 (ECMA-334, ISO/IEC 23270:2018)</em>
+					</p>
+					<ul class="lv1_indent">
+						<li>Microsoft still defines the standard and improves the language</li>
+						<li>Microsoft has agreed not to sue open source developers, under certain conditions</li>
+					</ul>
+					<br />
+					<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+						Relevant aspects:
+					</p>
+					<ul class="lv1_indent">
+						<li class="fragment">Mono is a common choice for game engines: <a href="https://en.wikipedia.org/wiki/Unity_(game_engine)">Unity</a>, <a href="https://en.wikipedia.org/wiki/Godot_(game_engine)">Godot</a>,...</li>
+					</ul>
+				</div>
+				<aside class="notes">
+					<p><em>Mono</em> provides an Open Source compiler, but <a href="http://tirania.org/blog/archive/2011/Mar-07.html">does not cover all since v4.0</a></p>
+					<p>Without any official support and despite potential legal issues hanging over their heads, they pushed forward and created an incredibly capable alternative to the official runtime implementation</p>
+				</aside>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title"><em>A revolutionary .NET 5 arrives in 2020</em></div>
+				<div class="slide-content">
+					<img src="img/dotnet5_platform.png" alt=".NET 5 Platform" class="maxed_height" />
+					<br /><br />
+					<div class="source">
+						<p>Source: <a href="https://devblogs.microsoft.com/dotnet/introducing-net-5/">Introducing .NET 5</a> by Richard Lander, Program Manager .Net Team</p>
+					</div>
+				</div>
+				<aside class="notes">
+					<p>In 2020, Microsoft is releasing .NET 5, which will incorporate all the functionality for all the platforms (desktop, CLI, web, mobile) and will even include some features from .NET Framework that are currently missing from both of them. So, from then onward, you will have just a single platform</p>
+				</aside>
+			</section>
+		</section>
+
+		<section>
+			<section>
+				<div class="slide-title centered-title">
+					<img src="img/logos/Python.png" alt="Python logo" class="slide_logo" /> <em>Python</em>
+				</div>
+				<div class="slide-content">
+					<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+						Designed by <em>Guido van Rossum</em> in <em>1991</em>
+					</p>
+					<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+						<em>Python Software Foundation License</em> since 2001 (GPL compatible)
+					</p>
+					<br />
+					<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+						Last stable version: <em>v3.8.0</em> (14/10/2019) / <em>v2.7.17</em> (19/10/2019)
+					</p>
+					<ul class="lv1_indent">
+						<li>The <a href="https://www.python.org/psf/">Python Software Foundation</a> fosters the development and improves the language</li>
+					</ul>
+					<br />
+					<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+						Standardized: <em>No</em>
+					</p>
+					<br />
+					<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+						Relevant aspects:
+					</p>
+					<ul class="lv1_indent">
+						<li class="fragment">Python is driven by its community, and everything is discussed in the main <a href="https://mail.python.org/mailman/listinfo/python-list">mailing list</a> and the <a href="https://www.python.org/psf/committees/">Work Groups</a></li>
+						<li class="fragment"><a href="https://legacy.python.org/dev/peps/pep-0373/">PEP 373</a>, that describes the End Of Life date for Python 2.7, moved the EOL to 2020</li>
+						<li class="fragment"><a href="https://legacy.python.org/dev/peps/pep-0404/">PEP 404</a> even describes the un-development and un-release schedule for Python 2.8</li>
+					</ul>
+				</div>
+				<aside class="notes">
+					<p>PEP = Python Enhancement Proposal</p>
+					<p>Pypy survives with public fundings and private donations. The port to ARM architecture was sponsored in part by the Raspberry Pi Foundation</p>
+					<p>RPython (Restricted Python)</p>
+					<p>A common neologism in the Python community is <b>pythonic</b></p>
+					<p>An important goal of the Python developers is making Python fun to use</p>
+				</aside>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title"><em>Guido just retired</em></div>
+				<div class="slide-content">
+					<a href="https://twitter.com/gvanrossum/status/1189546865114529792">
+						<img src="img/Guido-retirement-tweet.png" alt="Guido retirement tweet" class="img_full maxed_height" />
+					</a>
+					</div>
+					<aside class="notes">
+						<p>he stepped down from the BDFL position in July 2018</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/PHP.png" alt="PHP logo" class="slide_logo" /> <em>PHP</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Rasmus Lerdorf</em> in <em>1995</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>PHP License</em> (<b>not</b> GPL compatible)
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v7.3.12</em> (published in 21/11/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>Almost anyone can submit an <a href="https://wiki.php.net/rfc/howto">RFC</a>, but only past code contributors and selected representatives will participate in the decision</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>No</em>
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">The PHP Group membership is unclear</li>
+							<li class="fragment"><a href="https://wiki.php.net/rfc/releaseprocess">The release process was improved recently through a RFC</a></li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>You can always fork PHP from <a href="https://github.com/php/php-src">github</a></p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>The PHP Community</em></div>
+					<div class="slide-content">
+						<img src="img/php-user-groups.png" alt="PHP User Groups" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="http://php.ug/">php.ug</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Facebook, Wordpress</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/JavaScript.png" alt="JavaScript logo" class="slide_logo" /> <em>JavaScript</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Brendan Eich</em> @ Netscape in <em>1995</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<a href="http://www.mozilla.org/rhino">Rhino</a> has <em>MPL license</em>, <a href="http://code.google.com/p/v8">V8</a> has <em>BSD license</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>ECMAScript 2019</em> (published in June 2019)
+						</p>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>since 1997 (ECMA 262)</em>
+						</p>
+						<ul class="lv1_indent">
+							<li>The <a href="http://www.ecma-international.org/memento/TC39.htm">TC39 Group</a> defines and improves the standard</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">Only Ecma members (company level only with costly fees unless non-profit) can belong to a Technical Committee, so <a href="https://www.ecma-international.org/memento/tc39.htm">TC39 is coped by multinationals</a></li>
+							<li class="fragment">Don't panic, but <a href="http://tsdr.uspto.gov/#caseNumber=75026640&caseType=SERIAL_NO&searchType=statusSearch">"JavaScript" is still a <b>trademark</b> of Oracle</a></li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>Current TC39 members: Paypal, Mozilla, Microsoft & Google</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>is the JS Framework fatigue slowing down?</em></div>
+					<div class="slide-content">
+						<img src="img/JS-framework-fatigue.jpg" alt="JS Framework fatigue" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://cube-drone.com/#javascript-orthodoxy">cube-drone.com</a></p>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Ruby.png" alt="Ruby logo" class="slide_logo" /> <em>Ruby</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Yukihiro "Matz" Matsumoto</em> in <em>1995</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>Ruby License</em> and <em>GPLv2</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v2.6.5</em> (published in 01/10/2019)
+						</p>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>since 2011 (JIS X 3017)</em>
+						</p>
+						<ul class="lv1_indent">
+							<li>Last change in the standard was in 2012 (ISO/IEC 30170)</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment"><a href="https://bugs.ruby-lang.org/projects/ruby/wiki/CommitterHowto">Commit rights are obtained by merits</a>, but Matz's approval is always required</li>
+							<li class="fragment"><a href="https://bugs.ruby-lang.org/projects/ruby/wiki/Contributors">Ruby Core contributors</a> mostly live in Japan</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>Why's (Poignant) Guide to Ruby</em></div>
+					<div class="slide-content">
+						<br />
+						<center><img src="img/poignant-guide-2.png" alt="Why's (Poignant) Guide to Ruby" class="maxed_height" /></center>
+						<br />
+						<center><img src="img/poignant-guide-3.png" alt="Why's (Poignant) Guide to Ruby" class="maxed_height" /></center>
+						<div class="source">
+							<p>Source: <a href="http://poignant.guide/book/">http://poignant.guide/book</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Why’s (Poignant) Guide to Ruby is released under the Attribution-ShareAlike License.</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Perl.png" alt="Perl logo" class="slide_logo" /> <em>Perl</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Larry Wall</em> @ Unisys in <em>1987</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>GNU GPL License</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v5.30.1</em> (published in 10/11/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li><b>Perl 5</b> is actively maintained and developed by volunteers.</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>No</em>
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">"<i>In Perl 6, we decided it would be better to fix the language than fix the user</i>" --Larry Wall about Perl6</li>
+							<li class="fragment">Perl 6, announced in 2015, was renamed to <a href="https://raku.org/">Raku</a> in Oct 2019</li>
+							<li class="fragment">The Perl community rocks: <a href="http://www.csse.monash.edu.au/~damian/papers/HTML/Perligata.html">Lingua::Romana::Perligata</a> module, <a href="http://www.perlmonks.org/?node_id=1590">Perl Poetry</a>, ...</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>Lingua::Romana::Perligata -- that makes it possible to write Perl programs in Latin</p>
+						<p>TIMTOWTDI - There's more than one way to do it (pronounced Tim Toady) </p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>Camelia, the Raku mascot</em></div>
+					<div class="slide-content">
+						<img src="img/logos/Camelia.png" alt="Camelia, the Raku mascot" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://commons.wikimedia.org/wiki/File:Camelia.svg">Wikimedia</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Compatibility with Perl is not a goal, though a compatibility mode is part of the specification</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Groovy.png" alt="Groovy logo" class="slide_logo" /> <em>Apache Groovy</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>James Strachan</em> in <em>2003</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>Apache License v2.0</em> (since 2015)
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v2.5.8</em> (published in 02/08/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>It's supported by the <a href="http://www.apache.org/">Apache Software Foundation</a> and the Groovy community</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>No</em>
+						</p>
+						<ul class="lv1_indent">
+							<li>JCP's <a href="https://www.jcp.org/en/jsr/detail?id=241">JSR 241</a> is dormant since 2012</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">After being owned by several companies (SpringSource, VMWare, Pivotal) it was <a href="https://blogs.apache.org/foundation/entry/groovy_submitted_to_become_a">adopted by the Apache Software Foundation</a> in 2015</li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>Apache Groovy is surviving well the birth of a natural predator like Kotlin</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>A framework for the future, now</em></div>
+					<div class="slide-content">
+						<center><img src="img/logos/Micronaut.png" alt="Micronaut" class="img_full maxed_height" /></center>
+						<div class="source">
+							<p>Source: <a href="https://micronaut.io/">micronaut.io</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>...</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Go.png" alt="Go logo" class="slide_logo" /> <em>Go</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Robert Griesemer, Rob Pike and Ken Thompson</em> @ Google in <em>2009</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>BSD-style license</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v1.13.4</em> (published in 31/10/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>Griesemer, Pike and Thompson spent 2 years full time designing the basics</li>
+							<li>Now the Go community defines and improves the language</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>De facto standard</em> via Go Language Specification
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">Community driven, but with major support (and some control) by <a href="https://www.google.es">Google</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>Leader in Infrastructure as Code</em></div>
+					<div class="slide-content">
+						<center><img src="img/Gopher-Docker.png" alt="Gopher and Docker" class="img_full maxed_height" /></center>
+						<div class="source">
+							<p>Source: <a href="https://hackernoon.com/building-a-development-environment-for-golang-with-docker-3ccc620c4920">Hackernoon.com</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Other projects written in Go: Caddy, CockroachDB, Hugo, Kubernetes, Mattermost, Openshift, Terraform, ...</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Rust.png" alt="Rust logo" class="slide_logo" /> <em>Rust</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Graydon Hoare</em> @ Mozilla in <em>2010</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>Apache License v2.0</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v1.39</em> (published in 07/11/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>Rust has a community-driven development process under the <i>steering</i> of a <a href="https://github.com/rust-lang/rust-wiki-backup/blob/master/Note-core-team.md">'core team'</a> with the main comitters (mostly from <a href="http://mozilla.org/">Mozilla</a>)</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>No</em>
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">Rust has been the most-loved programming language in last four <a href="https://stackoverflow.com/">Stack Overflow</a> annual surveys (<a href="https://stackoverflow.com/insights/survey/2016#technology-most-loved-dreaded-and-wanted">2016</a>, <a href="https://stackoverflow.com/insights/survey/2017#most-loved-dreaded-and-wanted">2017</a>, <a href="https://insights.stackoverflow.com/survey/2018#technology-most-loved-dreaded-and-wanted-languages">2018</a> and <a href="https://insights.stackoverflow.com/survey/2019#technology-_-most-loved-dreaded-and-wanted-languages">2019</a>)</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>Mozilla Pledge</em> for a Healthy Internet</div>
+					<div class="slide-content">
+						<img src="img/Mozilla-Pledge.png" alt="Mozilla Foundation Pledge" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://www.mozilla.org/en-US/about/manifesto/">moz://a.org</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>10 Principles on the Mozilla Manifesto</p>
+						<ol>
+							<li>The Internet is an integral part of modern life—a key component in education, communication, collaboration, business, entertainment and society as a whole.</li>
+							<li>The Internet is a global public resource that must remain open and accessible.</li>
+							<li>The Internet must enrich the lives of individual human beings.</li>
+							<li>Individuals’ security and privacy on the Internet are fundamental and must not be treated as optional.</li>
+							<li>Individuals must have the ability to shape the Internet and their own experiences on the Internet.</li>
+							<li>The effectiveness of the Internet as a public resource depends upon interoperability (protocols, data formats, content), innovation and decentralized participation worldwide.</li>
+							<li>Free and open source software promotes the development of the Internet as a public resource.</li>
+							<li>Transparent community-based processes promote participation, accountability and trust.</li>
+							<li>Commercial involvement in the development of the Internet brings many benefits; a balance between commercial profit and public benefit is critical.</li>
+							<li>Magnifying the public benefit aspects of the Internet is an important goal, worthy of time, attention and commitment.</li>
+						</ol>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Clojure.png" alt="Clojure logo" class="slide_logo" /> <em>Clojure</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Rich Hickey</em> in <em>2007</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em><a href="http://www.eclipse.org/legal/epl-v10.html">Eclipse Public License</a></em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v1.10.1</em> (published in 06/06/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>Clojure is developed by a core team from <a href="https://cognitect.com/">Cognitect</a> (where <a href="https://cognitect.com/about.html#the-team">Hickey is CTO</a>) and Rich Hickey needs to approve everything</li>
+							<li>The process is not fully closed, but it's extremely conservative</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>No</em>
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">Clojure is <b>owned</b> by Rich Hickey, and it totally depends on Cognitect resources</li>
+							<li class="fragment">There is an underlying dissatisfaction with the contribution process (<a href="https://www.reddit.com/r/Clojure/comments/a0pjq9/rich_hickey_open_source_is_not_about_you/">example from Nov 2018</a>), but most of the community is grateful anyway</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>BaaB</em> (BDFL as a Bottleneck)</div>
+					<div class="slide-content">
+						<img src="img/clojure_workflow.png" alt="Clojure workflow" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: <a href="https://clojure.org/dev/workflow">Clojure workflow</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Remark the green steps with Rich's approval</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Scala.png" alt="Scala logo" class="slide_logo" /> <em>Scala</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>Martin Odersky</em> in <em>2004</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>Apache License 2.0</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v2.13.1</em> (published in 11/06/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>The Scala language is a cooperative project of the <a href="https://scala.epfl.ch/">Scala Center at EPFL</a>, <a href="https://www.lightbend.com/">Lightbend</a>, and the Scala community</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>De facto standard</em> via Scala Language Specification (SLS)
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">The Scala Center focuses on education, Lightbend also in commercial support and services</li>
+							<li class="fragment">Dotty vs Cats/Circe vs <a href="http://degoes.net/articles/zio-solo">scalaz vs Zio</a></li>
+						</ul>
+					</div>
+					<aside class="notes">
+						<p>EPFL - Ecole Polytechnique Fédérale de Lausanne</p>
+						<p>Martin Odersky also wrote the basis for the javac compiler</p>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title">A <em>Civil War</em> is starting around <em>John de Goes</em></div>
+					<div class="slide-content">
+						<a href="https://twitter.com/jdegoes/status/1193932175365660672">
+							<img src="img/John-de-Goes-tweet.png" alt="John de Goes tweet" class="img_full maxed_height" />
+						</a>
+						<div class="source">
+							<p>Source: <a href="https://meta.plasm.us/posts/2019/09/01/jdg-and-the-fp-community/">John De Goes and the FP community | Travis Brown</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>De Goes defending white supremacists and misogynists.</p>
+						<p>De Goes attacking critics and accusing them (especially women) of lying.</p>
+						<p>De Goes engaging in targeted harassment, either directly (@druconfessions) or indirectly (e.g. via ClarkHat, a LambdaConf sponsor).</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<div class="slide-title centered-title">
+						<img src="img/logos/Kotlin.png" alt="Kotlin logo" class="slide_logo" /> <em>Kotlin</em>
+					</div>
+					<div class="slide-content">
+						<p><img src="img/icons/designer.png" alt="Designer" class="small_rounded_icon" />
+							Designed by <em>JetBrains</em> in <em>2011</em>
+						</p>
+						<p><img src="img/icons/license.png" alt="License" class="small_rounded_icon" />
+							<em>Apache License 2.0</em>
+						</p>
+						<br />
+						<p><img src="img/icons/release.png" alt="Release" class="small_rounded_icon" />
+							Last stable version: <em>v1.3.60</em> (published in 18/09/2019)
+						</p>
+						<ul class="lv1_indent">
+							<li>Sponsored and developed mainly by <em>JetBrains</em>, with contributions by <em>Google</em></li>
+							<li>Kotlin 1.0 was released in 2016</li>
+						</ul>
+						<br />
+						<p><img src="img/icons/standard.png" alt="Standard" class="small_rounded_icon" />
+							Standardized: <em>No</em>
+						</p>
+						<br />
+						<p><img src="img/icons/important.png" alt="Important" class="small_rounded_icon" />
+							Relevant aspects:
+						</p>
+						<ul class="lv1_indent">
+							<li class="fragment">Jetbrains provides plugin support for IntelliJ IDEA, Android Studio and Eclipse</li>
+							<li class="fragment">Google announced <a href="https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/">first-class support for Kotlin on <em>Android</em> in 2017</a></li>
+							<li class="fragment">On May 2017 Google announced that <a href="http://social.techcrunch.com/2019/05/07/kotlin-is-now-googles-preferred-language-for-android-app-development/">Kotlin is the preferred language for Android app developers</a></li>
+							<li class="fragment">At Android Dev Summit 2019 Google announced that <a href="https://android-developers.googleblog.com/2019/10/android-dev-summit-2019-keynote.html">nearly 60% of the top 1000 Android apps on the Play Store now use Kotlin</a></li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>Google Adopted Kotlin for Android</em></div>
+					<div class="slide-content">
+						<img src="img/Google-Adopted-Kotlin-Android.jpg" alt="Google Adopted Kotlin for Android" class="img_full" />
+						<div class="source">
+							<p>Source: <a href="https://www.techyourchance.com/why-google-adopted-kotlin-for-android/">techyourchance.com</a></p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>...</p>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<section data-background="img/gifs/excited_minions.gif">
+					<div class="subtitle">
+						<p>And finally my own...<br /><em>Magic Quadrant!!</em></p>
+					</div>
+					<aside class="notes">
+						<p>Ethics Parameters</p>
+						<ul>
+							<li>Governance transparency</li>
+							<li>Freedom & Independency</li>
+							<li>License</li>
+							<li>Community relevance</li>
+							<li>Efforts to diversity</li>
+						</ul>
+						<p>Health Parameters</p>
+						<ul>
+							<li>Language Popularity (TIOBE)</li>
+							<li>Public presence (Github)</li>
+							<li>Language evolution</li>
+							<li>Maturity</li>
+							<li>Expected tendency</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<div class="slide-title centered-title"><em>Magic Quadrant</em></div>
+					<div class="slide-content">
+						<img src="img/magic_quadrant.png" alt="Magic Quadrant" class="img_full maxed_height" />
+						<div class="source">
+							<p>Source: lots of data + biased opinions</p>
+						</div>
+					</div>
+					<aside class="notes">
+						<p>Ethics Parameters</p>
+						<ul>
+							<li>Governance transparency</li>
+							<li>Freedom & Independency</li>
+							<li>License</li>
+							<li>Community relevance</li>
+							<li>Efforts to diversity</li>
+						</ul>
+						<p>Health Parameters</p>
+						<ul>
+							<li>Language Popularity (TIOBE)</li>
+							<li>Public presence (Github)</li>
+							<li>Language evolution</li>
+							<li>Maturity</li>
+							<li>Expected tendency</li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title">
+					<em>Communities and gatherings near here</em>
+				</div>
+				<div class="slide-content">
+					<img src="img/logos/Meetup.png" alt="Meetup logo" class="slide_logo" />
+					<ul class="lv1_indent">
+						<li><em>Java</em>: <a href="http://www.meetup.com/es-ES/MadridJUG/">MadridJUG Meetup</a></li>
+						<li><em>C</em>: <a href="http://www.meetup.com/es-ES/Madrid-C-Cpp/">Madrid C/C++ Meetup</a></li>
+						<li><em>C#</em>: <a href="http://www.meetup.com/es-ES/madriddotnet/">Madrid.net Meetup</a>, <a href="http://www.meetup.com/es-ES/Xamarin-Madrid/">Xamarin-Madrid Meetup</a></li>
+						<li><em>Python</em>: <a href="http://www.meetup.com/es-ES/Madrid-Python-Meetup/">Madrid-Python Meetup</a></li>
+						<li><em>PHP</em>: <a href="http://www.meetup.com/es-ES/PHPMad/">PHPMad Meetup</a></li>
+						<li><em>Javascript</em>: <a href="http://www.meetup.com/es-ES/madridjs/">MadridJS Meetup</a>, <a href="http://www.meetup.com/es-ES/Node-js-Madrid/">NodeJS Madrid Meetup</a>, <a href="http://www.meetup.com/es-ES/AngularJS_Madrid/">AngularJS Madrid Meetup</a>, <a href="http://www.meetup.com/es-ES/Ember-js-Madrid/">EmberJS Madrid Meetup</a>, <a href="http://www.meetup.com/es-ES/Madrid-Polymer-Group/">Polymer Madrid Meetup</a></li>
+						<li><em>Ruby</em>: <a href="http://www.madridrb.com/">Madrid.rb</a></li>
+						<li><em>Groovy</em>: <a href="http://www.meetup.com/es-ES/madrid-gug/">MadridGUG Meetup</a></li>
+						<li><em>Go</em>: <a href="http://www.meetup.com/es-ES/go-mad/">Madrid Go Meetup</a></li>
+						<li><em>Clojure</em>: <a href="http://www.meetup.com/es-ES/FP-Madrid/">FP Madrid Meetup</a></li>
+						<li><em>Scala</em>: <a href="https://www.meetup.com/es-ES/Scala-Programming-Madrid/">Scala Programming Madrid Meetup</a></li>
+						<li><em>Kotlin</em>: <a href="https://www.meetup.com/es-ES/KotlinMAD/">KotlinMAD Meetup</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title">Akwnoledgements</div>
+				<div class="slide-content">
+					<img src="img/gifs/thanks.gif" alt="Thanks" class="img_full fixed_height" />
+					<p class="lv2_indent">
+						<img src="img/icons/thanks_icon.png" alt="Thanks to" class="rounded_icon" />
+						<a href="https://twitter.com/alotor">Alonso Torres</a>
+					</p>
+					<p class="lv2_indent">
+						<img src="img/icons/thanks_icon.png" alt="Thanks to" class="rounded_icon" />
+						<a href="https://twitter.com/diacritica">Pablo Ruiz Múzquiz</a>
+					</p>
+					<p class="lv2_indent">
+						<img src="img/icons/thanks_icon.png" alt="Thanks to" class="rounded_icon" />
+						<a href="https://twitter.com/esloho">Esther Lozano Hontecillas</a>
+					</p>
+					<p class="lv2_indent">
+						<img src="img/icons/thanks_icon.png" alt="Thanks to" class="rounded_icon" />
+						<a href="https://twitter.com/ilopmar">Iván López</a>
+					</p>
+					<p class="lv2_indent">
+						<img src="img/icons/thanks_icon.png" alt="Thanks to" class="rounded_icon" />
+						<a href="https://twitter.com/jesusmluque">Jesús Montero Luque</a>
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<div class="slide-title centered-title">Bibliography</div>
+				<div class="slide-content">
+					<p class="bibliography">
+						<img src="img/icons/information.png" alt="Link to article" class="rounded_icon" />
+						Lots of <a href="https://en.wikipedia.org/"><em>en.wikipedia.org</em></a> content
+					</p>
+					<p class="bibliography">
+						<img src="img/icons/information.png" alt="Link to article" class="rounded_icon" />
+						Lots of <a href="https://duckduckgo.com"><em>DuckDuckGo</em></a> crazy searches :-)
+					</p>
+					<p class="bibliography">
+						<img src="img/icons/information.png" alt="Link to article" class="rounded_icon" />
+						Official stuff:<br /><a href="https://java.com/">java.com</a>, <a href="https://www.python.org/">python.org</a>,
+						<a href="https://php.net/">php.net</a>, <a href="https://www.ruby-lang.org/">ruby-lang.org</a>,
+						<a href="https://www.perl.org/">perl.org</a>, <a href="https://groovy-lang.org/">groovy-lang.org</a>,
+						<a href="https://golang.org/">golang.org</a>, <a href="https://www.rust-lang.org/">rust-lang.org</a>,
+						<a href="https://clojure.org/">clojure.org</a>, <a href="https://www.scala-lang.org/">scala-lang.org</a>
+						& <a href="https://kotlinlang.org/">kotlinlang.org</a>
+					</p>
+					<p class="bibliography">
+						<img src="img/icons/information.png" alt="Link to article" class="rounded_icon" />
+						<a href="https://fsfe.org/"><em>Free Software Foundation Europe</em></a>
+					</p>
+					<p class="bibliography">
+						<img src="img/icons/information.png" alt="Link to article" class="rounded_icon" />
+						<a href="https://www.gnu.org/licenses/licenses.en.html"><em>gnu.org</em> software licenses and resources</a>
+					</p>
+					<p class="bibliography">
+						<img src="img/icons/information.png" alt="Link to article" class="rounded_icon" />
+						<a href="https://choosealicense.com/">choosealicense.com</a> by <a href="http://github.com/">Github, Inc</a>
+					</p>
+				</div>
+			</section>
+
+			<section data-background="img/gifs/questions.gif">
+				<div class="title"><em>Thank you !!</em></div>
+				<br /><br /><br />
+				<div class="subtitle">
+					<p><em>Luis García Castro<br />@luiyo</em></p>
+					<br />
+					<p id="creativeCommons">
+						<img src="img/icons/creative-commons.png" alt="Creative Commons" class="rounded_icon" />
+						<a href="https://creativecommons.org/licenses/by-sa/3.0/"><small>Creative Commons CC-BY-SA</small></a>
+					</p>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+	// More info about config & dependencies:
+	// - https://github.com/hakimel/reveal.js#configuration
+	// - https://github.com/hakimel/reveal.js#dependencies
+	Reveal.initialize({
+		dependencies: [
+			{ src: 'plugin/markdown/marked.js' },
+			{ src: 'plugin/markdown/markdown.js' },
+			{ src: 'plugin/notes/notes.js', async: true },
+			{ src: 'plugin/highlight/highlight.js', async: true }
+		]
+	});
+	</script>
+</body>
+</html>
