@@ -16,13 +16,10 @@ View in GitHub-Pages: [Concerning Governance in Programming Languages] (https://
   - by public projects, by jobs posted, by SO activity, ...
 + Critical Analysis of those languages
  + Java, C, C#, Python, PHP, JavaScript, Ruby, Perl, Groovy, Go, Rust, Clojure, Scala & Kotlin
-+ My own Magic Quadrant
 
 # Resources
 
-* [impress.js](https://github.com/bartaz/impress.js) - An open source presentation framework based on the power of HTML5 and CSS3 transforms and transitions
-* [impress-console](https://github.com/regebro/impress-console) - module that provides a speaker console for impress.js presentations
-* [Graph / Tree Slide Generator](http://4quantOSS.github.io/shiny-impress.js) - Uses the igraph library in R to generate optimally positioned graphs from given connectivities and generates a presentation from these results. A live version is available [here](https://4quant.shinyapps.io/gimpress/)
+* [reveal.js](https://github.com/hakimel/reveal.js) - An open source HTML presentation framework
 
 # Bibliography
 
